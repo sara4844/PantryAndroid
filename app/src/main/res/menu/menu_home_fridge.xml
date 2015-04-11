@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pantry.puck.com.pantry.HomeFridgeActivity">
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/ic_launcher"/>
+        <!--
+        <menu>
+            <item android:id="@+id/logout"
+
+                android:title="Logout"
+                android:onClick="onSort" />
+            <item android:id="@+id/add_puck"
+
+                android:title="Switch Puck"
+                android:onClick="onSort" />
+        </menu> -->
+
+
+</menu>

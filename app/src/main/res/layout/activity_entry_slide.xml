@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--  Header Starts-->
+    <!-- Banner Start-->
+    <ViewFlipper
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/switcher"
+        android:layout_width="match_parent"
+
+        android:layout_height="200dp"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:flipInterval="4000"
+        android:autoStart="true"
+        >
+        <!-- android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out" -->
+        <!--android:background="@layout/header_gradient"-->
+        <ImageView
+            android:id="@+id/img1"
+            android:contentDescription="string/banner_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"/>
+            <!--need drawable?-->
+        <ImageView
+            android:id="@+id/img2"
+            android:contentDescription="banner desc goes here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+        <!--android:src="@drawable/spot_banner2" -->
+        <ImageView
+            android:id="@+id/img4"
+            android:contentDescription="string/banner_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            />
+        <!--android:src="@drawable/spot_banner3" -->
+    </ViewFlipper>
+    <!-- Banner Ends -->
+
+    <!-- RadioSelector Start -->
+    <RadioGroup
+        android:layout_below="@id/switcher"
+        android:id="@+id/radioEntry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/radioLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_margin="0dp"
+            android:layout_weight="0.5"
+            android:textSize="15sp"
+
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center" />
+        <!-- android:background="@drawable/btn1_selector" -->
+        <RadioButton
+            android:id="@+id/radioJoin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Join"
+            android:layout_margin="0dp"
+            android:layout_weight="0.5"
+
+            android:button="@null"
+            android:textSize="15sp"
+            android:gravity="center" />
+        <!-- android:background="@drawable/btn1_selector"-->
+    </RadioGroup>
+    <!-- RadioSelector End -->
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/radioEntry"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.facebook.widget.LoginButton
+        android:layout_alignParentBottom="true"
+        android:id="@+id/authButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>
